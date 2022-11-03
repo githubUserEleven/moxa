@@ -15,33 +15,24 @@
   @include media(">=tablet") {
     font-size: 16px;
     height: 51px;
-    padding: 10px 36px;
+    padding: 10px 38px;
   }
-}
 
-// .btn-sm {
-//   height: 42px;
-//   padding: 9px 29px;
-// }
+  &.btn-outline-primary {
+    background-color: #f2f1ef;
+    color: $black;
 
-// .btn-md {
-//   padding: 9px 26px;
-// }
-
-.btn-outline-primary {
-  background-color: #f2f1ef;
-  color: $black;
-
-  &:hover {
-    background-color: darken(#f2f1ef, 15%);
+    &:hover {
+      background-color: darken(#f2f1ef, 15%);
+    }
   }
-}
 
-.btn-primary {
-  background-color: $black;
-  color: white;
+  &.btn-primary {
+    background-color: $black;
+    color: white;
 
-  &:hover {
-    background-color: lighten($black, 15%);
+    &:hover {
+      background-color: lighten($black, 15%);
+    }
   }
 }

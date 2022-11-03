@@ -18,44 +18,6 @@ $media-expressions: (
     "(-webkit-min-device-pixel-ratio: 3), (min-resolution: 350dpi), (min-resolution: 3dppx)",
 );
 
-// @font-face {
-//   font-family: "icomoon";
-//   src: url("fonts/icomoon.eot?ufezul");
-//   src: url("fonts/icomoon.eot?ufezul#iefix") format("embedded-opentype"),
-//     url("fonts/icomoon.ttf?ufezul") format("truetype"),
-//     url("fonts/icomoon.woff?ufezul") format("woff"),
-//     url("fonts/icomoon.svg?ufezul#icomoon") format("svg");
-//   font-weight: normal;
-//   font-style: normal;
-//   font-display: block;
-// }
-
-// [class^="icon-"],
-// [class*=" icon-"] {
-//   /* use !important to prevent issues with browser extensions that change fonts */
-//   font-family: "icomoon" !important;
-//   // speak: never;
-//   font-style: normal;
-//   font-weight: normal;
-//   font-variant: normal;
-//   text-transform: none;
-//   line-height: 1;
-
-//   /* Better Font Rendering =========== */
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
-
-// .icon-instagram:before {
-//   content: "\ea92";
-// }
-// .icon-twitter:before {
-//   content: "\ea96";
-// }
-// .icon-linkedin2:before {
-//   content: "\eaca";
-// }
-
 * {
   box-sizing: border-box;
 }
@@ -139,10 +101,7 @@ img {
 }
 
 .container-lg {
-  width: 100%;
   max-width: 1310px;
-  padding: 0 15px;
-  margin: 0 auto;
 }
 
 .section {
@@ -158,7 +117,7 @@ img {
   margin-bottom: 20px;
 
   @include media(">=tablet") {
-    margin-bottom: 65px;
+    margin-bottom: 55px;
   }
 
   h3 {
@@ -171,15 +130,27 @@ img {
   }
 }
 
+.bg-color-black {
+  background-color: $black;
+}
+
+.color-white {
+  color: white;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
 #header {
   display: flex;
   align-items: center;
-  background-color: #f2f1ef;
   font-size: 14px;
   padding: 10px 0;
 
   .container-lg {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
   }
 
@@ -204,13 +175,13 @@ img {
     margin-right: 45px;
     height: 34px;
     border: 1px solid #161513;
-    padding: 7px 20px;
+    padding: 8px 20px;
 
     @include media(">=tablet") {
       font-size: 16px;
       height: 42px;
       border: 1px solid $black;
-      padding: 9px 29px;
+      padding: 6px 31px;
       margin: 0;
     }
   }
@@ -312,11 +283,13 @@ img {
   }
 
   @include media(">=tablet") {
-    width: auto;
+    padding-top: 3px;
+    width: 365px;
     position: static;
     height: auto;
     visibility: visible;
     overflow: visible;
+    background-color: transparent;
   }
 
   .navbar-nav {
@@ -325,12 +298,9 @@ img {
     flex-direction: column;
     align-items: center;
     font-size: 14px;
-    background-color: #f2f1ef;
     padding: 0;
 
     @include media(">=tablet") {
-      padding-top: 10px;
-      background-color: #f2f1ef;
       height: auto;
       flex-direction: row;
     }
@@ -338,6 +308,10 @@ img {
     > li {
       @extend %list-reset;
       margin: 17px;
+
+      @include media(">=tablet") {
+        margin: 0 17px;
+      }
     }
 
     a {
@@ -349,6 +323,7 @@ img {
 
       @include media(">=tablet") {
         font-size: 16px;
+        padding-bottom: 4px;
       }
 
       &:hover {
@@ -424,36 +399,37 @@ img {
 
 .marked-list {
   @extend %list-reset;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   font-size: 17px;
-  margin-bottom: 20px;
+  margin: 0 -10px 20px;
 
   @include media(">=tablet") {
-    display: flex;
-    flex-wrap: wrap;
     font-size: 23px;
-    margin-bottom: 33px;
+    margin: 0 -25px 33px;
   }
 
   > li {
     position: relative;
-    margin: 0;
+    padding: 0 10px;
+    margin-bottom: 5px;
 
     @include media(">=tablet") {
-      margin: 0 29px;
+      padding: 0 25px;
     }
 
     &::after {
       position: absolute;
       content: url(../icons/verySmallStar.svg);
       margin-left: 18px;
-    }
-    &:last-child:after {
-      content: "";
+
+      @include media("<tablet") {
+        content: "";
+      }
     }
 
-    &:first-child {
-      margin-left: 0;
+    &:last-child:after {
+      content: "";
     }
 
     a {
@@ -476,26 +452,28 @@ img {
     flex-wrap: wrap;
     margin: 0 -15px;
 
-    @include media(">=tablet") {
-      align-items: flex-start;
+    @include media(">=widescreen") {
+      align-items: center;
     }
+  }
+
+  .marked-list {
+    margin-bottom: 27px;
   }
 
   h2 {
     color: $black;
-    font-weight: 400;
     text-transform: uppercase;
-    margin: 74px 0px 31px;
+    margin: 0 0 33px;
   }
 
   &-descr {
     width: 100%;
     padding: 0 15px;
-    margin-bottom: 30px;
 
     @include media(">=tablet") {
       width: 55%;
-      margin: 0;
+      margin-bottom: 51px;
     }
   }
 
@@ -514,6 +492,7 @@ img {
 }
 
 .skills {
+  @extend %list-reset;
   display: none;
 
   @include media(">=tablet") {
@@ -523,26 +502,21 @@ img {
     transform: rotate(-5deg);
     background-color: $black;
     height: 64px;
-    margin: 38px 0;
+    padding-top: 8px;
+    margin: 34px -45px;
   }
 
-  @extend %list-reset;
-  display: flex;
-
   > li {
-    margin: 0 50px;
+    margin: 0 45px;
 
     &::after {
       position: absolute;
+      top: 26px;
       content: url(../icons/verySmallStar.svg);
       margin-left: 18px;
     }
     &:last-child:after {
       content: "";
-    }
-
-    &:first-child {
-      margin-left: 37px;
     }
 
     a {
@@ -561,10 +535,14 @@ img {
 }
 
 .bio {
-  min-height: 677px;
+  min-height: 541px;
   padding: 0 0 73px;
   display: flex;
   align-items: flex-end;
+
+  .marked-list {
+    margin: 0 -25px 0;
+  }
 
   .row {
     display: flex;
@@ -586,6 +564,60 @@ img {
 
     @include media(">=tablet") {
       width: 42%;
+      > li {
+        display: block;
+        height: auto;
+        border: 2px solid $black;
+        margin: 20px 0;
+
+        @include media(">=tablet") {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 19px;
+          margin: 23px 0;
+        }
+
+        .marker {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 48px;
+          height: 48px;
+          color: #fff;
+          background-color: $primary-color;
+          text-align: center;
+
+          @include media(">=tablet") {
+            display: flex;
+            margin-right: 24px;
+          }
+        }
+
+        .col {
+          display: block;
+          text-align: center;
+          padding: 12px 0;
+          margin: 10px 15px;
+
+          @include media(">=tablet") {
+            text-align: left;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+          }
+        }
+
+        .left {
+          width: 70%;
+        }
+
+        .right {
+          display: flex;
+          justify-content: flex-end;
+          width: 205px;
+        }
+      }
     }
   }
 
@@ -598,7 +630,7 @@ img {
   }
 
   h2 {
-    margin: 21px 0;
+    margin: 10px 0 21px;
     line-height: 1.15;
   }
 
@@ -610,18 +642,29 @@ img {
     margin: 9px 0;
   }
 
-  .designer-bio {
+  .designer-list {
     @extend %list-reset;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    text-align: center;
+    margin: 0 -15px;
 
     @include media(">=tablet") {
       text-align: left;
     }
 
+    > li {
+      padding: 0 15px;
+      margin-bottom: 10px;
+    }
+
     h6 {
       color: $primary-color;
+      margin-bottom: 5px;
+
+      @include media(">=tablet") {
+        margin-bottom: 7px;
+      }
     }
 
     span {
@@ -636,19 +679,23 @@ img {
 
 .status {
   @extend %list-reset;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 450px;
+  margin: 0 auto;
 
   @include media(">=tablet") {
-    display: flex;
+    max-width: 100%;
     justify-content: center;
+    padding: 18px 0 23px;
   }
 
-  .block {
+  > li {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-height: 159px;
+    min-height: 155px;
     padding: 15px;
     text-align: center;
     border: 1px solid $black;
@@ -676,102 +723,113 @@ img {
 
   span {
     display: inline-block;
+    font-size: 16px;
   }
 }
 
 .awards {
   padding: 71px 0 43px;
 
-  &-head {
-    margin-bottom: 66px;
+  .awards-head {
+    margin-bottom: 62px;
 
     h3 {
-      margin: 18px 0 13px;
+      margin: 18px 0 7px;
     }
   }
+}
 
-  &-list {
-    @extend %list-reset;
+.awards-list {
+  @extend %list-reset;
 
-    > li {
-      display: block;
-      height: auto;
-      border: 2px solid $black;
-      margin: 20px 0;
+  > li {
+    display: block;
+    height: auto;
+    border: 2px solid $black;
+    margin: 20px 0;
+
+    @include media(">=tablet") {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 19px;
+      margin: 23px 0;
+    }
+
+    .marker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 48px;
+      height: 48px;
+      color: #fff;
+      background-color: $primary-color;
+      text-align: center;
 
       @include media(">=tablet") {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 17px 32px 17px;
-        margin: 26px 0;
-      }
-
-      .marker {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 48px;
-        height: 48px;
-        color: #fff;
-        background-color: $primary-color;
-        text-align: center;
-
-        @include media(">=tablet") {
-          display: flex;
-          margin-right: 24px;
-        }
-      }
-
-      .col {
-        display: block;
-        text-align: center;
-        padding: 12px 0;
-        margin-bottom: 10px;
-
-        @include media(">=tablet") {
-          text-align: left;
-          display: flex;
-          align-items: center;
-          margin-bottom: 0;
-        }
-      }
-
-      .left {
-        width: 80%;
+        margin-right: 22px;
       }
     }
 
-    h5 {
-      margin: 0 0 5px;
-    }
-
-    p {
-      margin: 0;
-    }
-
-    .for-what {
-      margin-right: 8px;
+    .col {
+      display: block;
+      text-align: center;
+      padding: 11px 0;
+      margin: 10px 15px;
 
       @include media(">=tablet") {
-        font-size: 16px;
-        margin-right: 24px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
       }
     }
 
-    .year {
-      font-size: 13px;
-
-      @include media(">=tablet") {
-        font-size: 16px;
-      }
+    .left {
+      width: 70%;
     }
+
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      width: 205px;
+    }
+  }
+}
+
+h5 {
+  margin: 0 0 5px;
+}
+
+p {
+  margin: 0;
+}
+
+.for-what {
+  margin-right: 8px;
+
+  @include media(">=tablet") {
+    font-size: 16px;
+    margin-right: 24px;
+  }
+}
+
+.year {
+  font-size: 13px;
+
+  @include media(">=tablet") {
+    font-size: 16px;
   }
 }
 
 .portfolio {
   h3 {
     margin: 18px 0 21px;
+  }
+
+  .portfolio-head {
+    margin-bottom: 62px;
   }
 
   &-list {
@@ -788,42 +846,37 @@ img {
         display: flex;
         border: none;
         padding: 0;
-        margin: 48px 0;
+        margin: 0 0 83px 0;
       }
 
-      .box-img-left,
-      .box-img-right {
-        width: 100%;
-        margin: 10px 0;
+      h3 {
+        min-height: 111px;
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        max-width: 100%;
 
         @include media(">=tablet") {
-          width: 40%;
-          margin: 0;
-        }
-
-        img {
-          max-width: 100%;
-
-          @include media(">=tablet") {
-            max-width: 460px;
-          }
+          max-width: 460px;
         }
       }
 
-      .box-img-left {
+      .box-left {
         margin-left: 0;
 
         @include media(">=tablet") {
-          margin-right: 80px;
+          margin-right: 43px;
         }
       }
 
-      .box-img-right {
+      .box-right {
         margin-left: 0;
 
         @include media(">=tablet") {
-          margin-left: 77px;
-          width: 44%;
+          margin-left: 45px;
+          width: 72%;
         }
       }
 
@@ -842,7 +895,7 @@ img {
           margin: 20px 0;
 
           @include media(">=tablet") {
-            margin: 30px 0 53px;
+            margin: 31px 0 45px;
           }
         }
       }
@@ -858,7 +911,7 @@ img {
         color: white;
         letter-spacing: 1.44px;
         text-align: center;
-        padding: 9px 22px 9px 15px;
+        padding: 7px 9px 0 9px;
         margin: 20px 0 0;
       }
 
@@ -878,29 +931,19 @@ img {
 
 .services {
   &-wrapper {
-    display: block;
+    @extend %list-reset;
+    display: flex;
+    flex-wrap: wrap;
 
-    @include media(">=tablet") {
-      display: flex;
-    }
-
-    .col {
+    > li {
       width: 100%;
+      border: 2px solid $black;
+      padding: 10px 10px;
 
       @include media(">=tablet") {
         width: 50%;
+        padding: 30px 40px;
       }
-    }
-  }
-
-  .descr {
-    border: 2px solid $black;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-
-    @include media(">=tablet") {
-      padding: 30px 40px;
-      margin: 40px 40px 40px 0;
     }
   }
 }
