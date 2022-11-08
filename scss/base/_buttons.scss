@@ -1,6 +1,8 @@
 .btn {
   @include animate(background);
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   min-height: auto;
   color: white;
   border: none;
@@ -15,24 +17,27 @@
   @include media(">=tablet") {
     font-size: 16px;
     height: 51px;
-    padding: 10px 38px;
+    padding: 10px 36px;
   }
 
   &.btn-outline-primary {
+    @include animate(background color);
     background-color: #f2f1ef;
     color: $black;
 
     &:hover {
-      background-color: darken(#f2f1ef, 15%);
+      background-color: $black;
+      color: white;
     }
   }
 
   &.btn-primary {
+    @include animate(background color);
     background-color: $black;
     color: white;
 
     &:hover {
-      background-color: lighten($black, 15%);
+      background-color: lighten($black, 10%);
     }
   }
 }

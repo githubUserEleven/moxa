@@ -17,7 +17,7 @@
         <header id="header">
             <div class="container container-lg">
                 <a href="#" class="logo">
-                    <img src="./icons/logo.png" alt="logo">
+                    <img src="./icons/logo.svg" alt="logo">
                 </a>
                 <nav class="main-nav">
                     <ul class="navbar-nav">
@@ -104,30 +104,25 @@
                             </ul>
                         </div>
                     </div>
-
-                </div>
-            </section>
-            <div class="section status">
-                <div class="container">
                     <ul class="status">
                         <li>
-                            <h2>7+</h2>
-                            <span>Years of Experience</span>
+                            <span class="title">7+</span>
+                            <span class="description">Years of Experience</span>
                         </li>
                         <li class="bg-color-black color-white">
-                            <h2>50+</h2>
-                            <span>Project Completed</span>
+                            <span class="title">50+</span>
+                            <span class="description">Project Completed</span>
                         </li>
                         <li>
-                            <h2>30+</h2>
-                            <span>Happy Clients</span>
+                            <span class="title">30+</span>
+                            <span class="description">Happy Clients</span>
                         </li>
                     </ul>
                 </div>
-            </div>
+            </section>
             <section class="section awards">
                 <div class="container">
-                    <div class="awards-head">
+                    <div class="title-box">
                         <img src="./icons/small-star.svg" alt="">
                         <h3>Awards</h3>
                         <span class="subtitle">REGONITIONS & ACCOIMPLISHMENTS</span>
@@ -215,56 +210,58 @@
             </section>
             <section class="section portfolio">
                 <div class="container">
-
-                    <div class="portfolio-head">
+                    <div class="title-box">
                         <img src="./icons/small-star.svg" alt="">
                         <h3>Portfolio</h3>
                         <span class="subtitle">REGONITIONS & ACCOIMPLISHMENTS</span>
                     </div>
-
                     <ul class="portfolio-list">
                         <li>
-                            <div class="box-img box-left">
-                                <img src="./img/art-direction.png" alt="">
+                            <div class="embed-responsive">
+                                <div class="embed-responsive-item"
+                                    style="background: url(./img/art-direction.png); background-size: cover; background-position: center;">
+                                </div>
                             </div>
                             <div class="descr">
-                                <div>
-                                    <span class="badge badge-right">Art Direction</span>
-                                    <h3>Beautiful and advanced website interfaces</h3>
-                                    <a href="#">Read More</a>
-                                </div>
+                                <span class="badge badge-right">Art Direction</span>
+                                <h3>Beautiful and advanced website interfaces</h3>
+                                <a href="#">Read More</a>
                             </div>
                         </li>
                         <li class="row-reverse">
-                            <div class="box-img box-right" style="background: url(./img/art-direction.png); background-size: cover; background-position: center;"></div>
-                            <div class="descr">
-                                <div>
-                                    <span class="badge badge-right">Branding</span>
-                                    <h3>Design and extreme programming practice</h3>
-                                    <a href="#">Read More</a>
+                            <div class="embed-responsive">
+                                <div class="embed-responsive-item"
+                                    style="background: url(./img/branding.png); background-size: cover; background-position: center;">
                                 </div>
+                            </div>
+                            <div class="descr">
+                                <span class="badge badge-right">Branding</span>
+                                <h3>Design and extreme programming practice</h3>
+                                <a href="#">Read More</a>
                             </div>
                         </li>
                         <li>
-                            <div class="box-img box-left">
-                                <img src="./img/art-direction.png" alt="">
+                            <div class="embed-responsive">
+                                <div class="embed-responsive-item"
+                                    style="background: url(./img/web-design.png); background-size: cover; background-position: center;">
+                                </div>
                             </div>
                             <div class="descr">
-                                <div>
-                                    <span class="badge badge-right">Web Design</span>
-                                    <h3>Nature inspired design</h3>
-                                    <a href="#">Read More</a>
-                                </div>
+                                <span class="badge badge-right">Web Design</span>
+                                <h3>Nature inspired design</h3>
+                                <a href="#">Read More</a>
                             </div>
                         </li>
                         <li class="row-reverse">
-                            <div class="box-img box-right" style="background: url(./img/art-direction.png); background-size: cover; background-position: center;"></div>
-                            <div class="descr">
-                                <div>
-                                    <span class="badge badge-right">Motion Graphics</span>
-                                    <h3>Design and extreme programming practice</h3>
-                                    <a href="#">Read More</a>
+                            <div class="embed-responsive">
+                                <div class="embed-responsive-item"
+                                    style="background: url(./img/motion-graphics.png); background-size: cover; background-position: center;">
                                 </div>
+                            </div>
+                            <div class="descr">
+                                <span class="badge badge-right">Motion Graphics</span>
+                                <h3>Design and extreme programming practice</h3>
+                                <a href="#">Read More</a>
                             </div>
                         </li>
                     </ul>
@@ -273,72 +270,97 @@
 
             <section class="section services">
                 <div class="container">
-                    <div class="services-head">
+                    <div class="title-box">
                         <img src="./icons/small-star.svg" alt="">
                         <h3>Services</h3>
                         <span class="subtitle">REGONITIONS & ACCOIMPLISHMENTS</span>
                     </div>
-                    <ul class="services-wrapper">
+                    <ul class="services-list">
                         <li>
-                            <h4>Web Design</h4>
-                            <p>Every single project is a challenge that we accept eagerly. Let's implement
-                                innovative ideas together!</p>
+                            <div class="wrapper">
+                                <h4>Web Design</h4>
+                                <p>Every single project is a challenge that we accept eagerly. Let's implement
+                                    innovative ideas together!</p>
+                            </div>
                         </li>
                         <li>
-                            <h4>UI/UX Design</h4>
-                            <p>Every single project is a challenge that we accept eagerly. Let's implement
-                                innovative ideas together!</p>
+                            <div class="wrapper">
+                                <h4>Product Design</h4>
+                                <p>Every single project is a challenge that we accept eagerly. Let's implement
+                                    innovative ideas together!</p>
+                            </div>
                         </li>
                         <li>
-                            <h4>Product Design</h4>
-                            <p>Every single project is a challenge that we accept eagerly. Let's implement
-                                innovative ideas together!</p>
+                            <div class="wrapper">
+                                <h4>UI/UX Design</h4>
+                                <p>Every single project is a challenge that we accept eagerly. Let's implement
+                                    innovative ideas together!</p>
+                            </div>
                         </li>
+
                         <li>
-                            <h4>Art Direction</h4>
-                            <p>Every single project is a challenge that we accept eagerly. Let's implement
-                                innovative ideas together!</p>
+                            <div class="wrapper">
+                                <h4>Art Direction</h4>
+                                <p>Every single project is a challenge that we accept eagerly. Let's implement
+                                    innovative ideas together!</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </section>
             <section class="section custumers">
                 <div class="container">
-                    <div class="services-head">
+                    <div class="title-box">
                         <img src="./icons/small-star.svg" alt="">
                         <h3>Happy Customer</h3>
                     </div>
-                    <div class="custumers-wrapper">
-                        <a href="#">
-                            <img src="./img/tribal.png" alt="tribal">
-                        </a>
-                        <a href="#">
-                            <img src="./img/rpublica.png" alt="rpublica">
-                        </a>
-                        <a href="#">
-                            <img src="./img/veroxFloor.png" alt="veroxFloor">
-                        </a>
-                        <a href="#">
-                            <img src="./img/invoiceTwoGo.png" alt="invoiceTwoGo">
-                        </a>
-                        <a href="#">
-                            <img src="./img/veroxFloor.png" alt="veroxFloor">
-                        </a>
-                        <a href="#">
-                            <img src="./img/tribal.png" alt="tribal">
-                        </a>
-                        <a href="#">
-                            <img src="./img/invoiceTwoGo.png" alt="invoiceTwoGo">
-                        </a>
-                        <a href="#">
-                            <img src="./img/rpublica.png" alt="">
-                        </a>
-                    </div>
+                    <ul class="custumers-wrapper">
+                        <li>
+                            <a href="#">
+                                <img src="./img/tribal.png" alt="tribal">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/rpublica.png" alt="rpublica">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/veroxFloor.png" alt="veroxFloor">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/invoiceTwoGo.png" alt="invoiceTwoGo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/veroxFloor.png" alt="veroxFloor">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/tribal.png" alt="tribal">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/invoiceTwoGo.png" alt="invoiceTwoGo">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./img/rpublica.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <section class="section articles">
                 <div class="container">
-                    <div class="services-head">
+                    <div class="title-box">
                         <img src="./icons/small-star.svg" alt="">
                         <h3>Articles</h3>
                         <span class="subtitle">REGONITIONS & ACCOIMPLISHMENTS</span>
@@ -346,8 +368,8 @@
                     <ul class="articles-wrapper">
                         <li class="descr">
                             <div class="news">
-                                <div class="min-bio">
-                                    DESIGN / April 28, 2022
+                                <div class="date">
+                                    DESIGN &nbsp;&nbsp; / &nbsp;&nbsp; April 28, 2022
                                 </div>
                                 <h5>Why I moved from Wordpress to Webflow</h5>
                             </div>
@@ -357,26 +379,27 @@
 
                         <li class="descr">
                             <div class="news">
-                                <div class="min-bio">
-                                    DESIGN / April 28, 2022
+                                <div class="date">
+                                    DESIGN &nbsp;&nbsp; / &nbsp;&nbsp; April 26, 2022
                                 </div>
-                                <h5>What did i learn from doing 50+ design sprints</h5>
+                                <h5>What did i learn from doing 50+<span> design</span> sprints</h5>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore.</p>
                         </li>
                         <li class="descr">
                             <div class="news">
-                                <div class="min-bio">
-                                    DESIGN / April 28, 2022
+                                <div class="date">
+                                    BUSINESS & OFFICE &nbsp;&nbsp; / &nbsp;&nbsp; April 28, 2022
                                 </div>
                                 <h5>Fostering professional growth in your company</h5>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore et dolore.</p>
                         </li>
+                        <li><button class="btn btn-primary">Browse Articles</button></li>
                     </ul>
-                    <button class="btn btn-primary">Browse Articles</button>
+
                 </div>
                 <div class="big-star">
                     <img src="./icons/big-star.svg" alt="big-star">
@@ -384,13 +407,11 @@
             </section>
             <div class="subcribe">
                 <div class="container">
-                    <h5 class="descr">Subscribe to our newsletter</h5>
-                    <div class="form-wrapper">
-                        <form class="form">
+                    <span class="descr">Subscribe to our newsletter</span>
+                        <form class="mail-form">
                             <input type="email" placeholder="Email Address">
                             <button type="submit" class="btn btn-primary">Subscribe</button>
                         </form>
-                    </div>
                 </div>
             </div>
         </main>
@@ -407,7 +428,7 @@
                     </ul>
                 </div>
                 <div class="bottom-wrapper">
-                    <p class="made-by">© Made by Portfolio Template & powered by Flowbase</p>
+                    <span class="copyright">© Made by Portfolio Template & powered by Flowbase</span>
                     <ul class="social-list">
                         <li><a href="#"><img class="icon-linkedin2" src="./icons/linkedin.svg" alt="linkedin"></a></li>
                         <li><a href="#"><img class="icon-twitter" src="./icons/twitter.svg" alt="twitter"></a></li>
