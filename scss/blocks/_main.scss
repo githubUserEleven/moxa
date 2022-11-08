@@ -955,8 +955,8 @@ img {
 
     > li {
       display: block;
-      padding: 10px;
-      margin: 20px -21px;
+      // padding: 10px;
+      // margin: 20px -21px;
 
       @include media(">=tablet") {
         display: flex;
@@ -966,12 +966,16 @@ img {
       }
 
       &:last-child {
-        margin: 0 -21px 0;
+        @include media(">=tablet") {
+          margin: 0 -21px 0;
+        }
       }
 
       .embed-responsive,
       .descr {
-        margin: 0 21px;
+        @include media(">=tablet") {
+          margin: 0 21px;
+        }
       }
 
       .embed-responsive {
@@ -982,7 +986,11 @@ img {
       }
 
       .descr {
-        padding: 22px 0;
+        padding: 15px 0;
+
+        @include media(">=tablet") {
+          padding: 22px 0;
+        }
 
         h2,
         h3,
@@ -1041,7 +1049,11 @@ img {
 
     > li {
       width: 100%;
-      padding: 10px 10px;
+      padding: 10px 0;
+
+      @include media(">=phone") {
+        padding: 10px 10px;
+      }
 
       @include media(">=tablet") {
         width: 50%;
@@ -1119,7 +1131,7 @@ img {
   margin-bottom: 30px;
 
   @include media(">=desktop") {
-    margin-bottom: 82px;
+    margin-bottom: 52px;
   }
 
   .title-box {
@@ -1140,7 +1152,7 @@ img {
       flex-wrap: wrap;
       border: 2px solid $black;
       padding: 0 10px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
 
       @include media(">=tablet") {
         text-align: left;
@@ -1153,11 +1165,11 @@ img {
         font-size: 16px;
         width: 100%;
         padding: 0 10px;
+        margin: 10px 0;
 
         @include media(">=tablet") {
           width: 50%;
           line-height: 1.5;
-
           margin: 6px 0;
         }
       }
@@ -1177,10 +1189,11 @@ img {
     .news {
       width: 100%;
       padding: 0 15px;
-      margin-bottom: 8px;
+      margin: 10px 0 8px;
 
       @include media(">=tablet") {
         width: 50%;
+        margin-bottom: 8px;
       }
     }
   }
@@ -1224,16 +1237,22 @@ img {
 
   .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include media(">=tablet") {
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .descr {
     font-size: 16px;
-    margin-right: 15px;
+    margin-bottom: 10px;
 
     @include media(">=tablet") {
       font-size: 23px;
+      margin: 0 15px 0 0;
     }
   }
 
@@ -1284,7 +1303,11 @@ img {
   display: flex;
   align-items: center;
   background-color: $black;
-  padding: 66px 0 11px;
+  padding: 20px 0 15px;
+
+  @include media(">=tablet") {
+    padding: 66px 0 11px;
+  }
 
   .container {
     text-align: center;

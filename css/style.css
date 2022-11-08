@@ -976,8 +976,6 @@ img {
 }
 .portfolio-list > li {
   display: block;
-  padding: 10px;
-  margin: 20px -21px;
 }
 @media (min-width: 768px) {
   .portfolio-list > li {
@@ -987,12 +985,16 @@ img {
     margin: 0 -21px 94px;
   }
 }
-.portfolio-list > li:last-child {
-  margin: 0 -21px 0;
+@media (min-width: 768px) {
+  .portfolio-list > li:last-child {
+    margin: 0 -21px 0;
+  }
 }
-.portfolio-list > li .embed-responsive,
+@media (min-width: 768px) {
+  .portfolio-list > li .embed-responsive,
 .portfolio-list > li .descr {
-  margin: 0 21px;
+    margin: 0 21px;
+  }
 }
 @media (min-width: 768px) {
   .portfolio-list > li .embed-responsive {
@@ -1001,7 +1003,12 @@ img {
   }
 }
 .portfolio-list > li .descr {
-  padding: 22px 0;
+  padding: 15px 0;
+}
+@media (min-width: 768px) {
+  .portfolio-list > li .descr {
+    padding: 22px 0;
+  }
 }
 .portfolio-list > li .descr h2,
 .portfolio-list > li .descr h3,
@@ -1056,7 +1063,12 @@ img {
 }
 .services-list > li {
   width: 100%;
-  padding: 10px 10px;
+  padding: 10px 0;
+}
+@media (min-width: 480px) {
+  .services-list > li {
+    padding: 10px 10px;
+  }
 }
 @media (min-width: 768px) {
   .services-list > li {
@@ -1131,7 +1143,7 @@ img {
 }
 @media (min-width: 1024px) {
   .articles {
-    margin-bottom: 82px;
+    margin-bottom: 52px;
   }
 }
 @media (min-width: 768px) {
@@ -1147,7 +1159,7 @@ img {
   flex-wrap: wrap;
   border: 2px solid #161513;
   padding: 0 10px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   .articles .articles-wrapper .descr {
@@ -1161,6 +1173,7 @@ img {
   font-size: 16px;
   width: 100%;
   padding: 0 10px;
+  margin: 10px 0;
 }
 @media (min-width: 768px) {
   .articles .articles-wrapper .descr p {
@@ -1181,11 +1194,12 @@ img {
 .articles .articles-wrapper .news {
   width: 100%;
   padding: 0 15px;
-  margin-bottom: 8px;
+  margin: 10px 0 8px;
 }
 @media (min-width: 768px) {
   .articles .articles-wrapper .news {
     width: 50%;
+    margin-bottom: 8px;
   }
 }
 .articles .btn {
@@ -1230,16 +1244,23 @@ img {
 }
 .subcribe .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .subcribe .container {
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .subcribe .descr {
   font-size: 16px;
-  margin-right: 15px;
+  margin-bottom: 10px;
 }
 @media (min-width: 768px) {
   .subcribe .descr {
     font-size: 23px;
+    margin: 0 15px 0 0;
   }
 }
 .subcribe .mail-form {
@@ -1304,7 +1325,12 @@ img {
   display: flex;
   align-items: center;
   background-color: #161513;
-  padding: 66px 0 11px;
+  padding: 20px 0 15px;
+}
+@media (min-width: 768px) {
+  #footer {
+    padding: 66px 0 11px;
+  }
 }
 #footer .container {
   text-align: center;
